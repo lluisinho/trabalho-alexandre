@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <p>MINHA ORGANIZAÇÃO</p>
+        <h1>Lista de tarefas</h1>
+        <p>Organize o que precisa fazer, uma tarefa de cada vez.</p>
+    </header>
+
+    <main>
+        <p id="mensagem" role="status" aria-live="polite"></p>
+        <section aria-labelledby="titulo-formulario">
+            <h2 id="titulo-formulario">Nova tarefa</h2>
+            <form id="formulario">
+                <label for="nome">Nome da tarefa *</label>
+                <input id="nome" maxlength="150" required placeholder="Ex.: estudar Java">
+
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" rows="3" placeholder="O que precisa ser feito?"></textarea>
+
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="PENDENTE">Pendente</option>
+                    <option value="EM_ANDAMENTO">Em andamento</option>
+                    <option value="CONCLUIDA">Concluída</option>
+                </select>
+
+                <label for="observacoes">Observações</label>
+                <textarea id="observacoes" rows="2"></textarea>
+
+                <div class="acoes">
+                    <button id="salvar" type="submit">Salvar tarefa</button>
+                    <button id="cancelar" type="button" class="secundario" hidden>Cancelar edição</button>
+                </div>
+            </form>
+        </section>
+
+        <section aria-labelledby="titulo-lista">
+            <div class="cabecalho-lista">
+                <h2 id="titulo-lista">Minhas tarefas</h2>
+                <button id="atualizar" type="button" class="secundario">Atualizar</button>
+            </div>
+            <p id="situacao-lista">Carregando tarefas...</p>
+            <div id="lista"></div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,47 @@
+/* Aparência da página. O JavaScript cuida das ações. */
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: #f3f5f8;
+    color: #253247;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+header, main { max-width: 1000px; margin: auto; padding: 24px; }
+header { padding-top: 40px; }
+header > p:first-child { color: #315bb0; font-size: 12px; font-weight: bold; letter-spacing: 2px; }
+h1 { margin: 8px 0; font-size: 36px; }
+h2 { margin-top: 0; font-size: 21px; }
+header p { margin: 0; }
+main { display: grid; grid-template-columns: 1fr 1.3fr; gap: 24px; padding-top: 0; }
+section { background: white; border: 1px solid #dce2eb; border-radius: 12px; padding: 24px; align-self: start; }
+label { display: block; margin: 14px 0 6px; font-weight: bold; font-size: 14px; }
+input, textarea, select {
+    width: 100%; padding: 10px; border: 1px solid #aab6c7; border-radius: 6px;
+    font: inherit; background: white; color: inherit;
+}
+textarea { resize: vertical; }
+button { padding: 10px 14px; border: 1px solid transparent; border-radius: 6px; background: #315bb0; color: white; font: inherit; cursor: pointer; }
+button:hover { filter: brightness(0.92); }
+button:disabled { opacity: 0.6; cursor: wait; }
+:focus-visible { outline: 3px solid #789fed; outline-offset: 3px; }
+.secundario { background: #edf1f8; color: #263f6e; border-color: #dce2eb; }
+.excluir { background: #fff0f0; color: #a12929; border-color: #f2cccc; }
+.acoes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.cabecalho-lista { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.cabecalho-lista h2 { margin: 0; }
+.tarefa { border-top: 1px solid #dce2eb; margin-top: 20px; padding-top: 20px; overflow-wrap: anywhere; }
+.tarefa h3 { margin: 0 0 8px; }
+.tarefa p { white-space: pre-wrap; }
+.status { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 13px; background: #fff3d0; color: #725400; }
+.EM_ANDAMENTO { background: #e7efff; color: #254e96; }
+.CONCLUIDA { background: #e0f3e9; color: #236543; }
+#mensagem { grid-column: 1 / -1; margin: 0; color: #236543; }
+#mensagem:empty { display: none; }
+#mensagem.erro { color: #a12929; }
+#situacao-lista { color: #59677c; }
+@media (max-width: 700px) {
+    main { grid-template-columns: 1fr; }
+    header, main { padding-left: 16px; padding-right: 16px; }
+    h1 { font-size: 30px; }
+}
