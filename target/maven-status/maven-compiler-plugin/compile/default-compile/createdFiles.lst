@@ -1,11 +1,11 @@
+com\fatec\todolist\service\TarefaService.class
+com\fatec\todolist\exception\RegraNegocioException.class
 com\fatec\todolist\controller\TarefaController.class
 com\fatec\todolist\exception\RestExceptionHandler.class
 com\fatec\todolist\model\entity\Tarefa.class
 com\fatec\todolist\model\repository\TarefaRepository.class
 com\fatec\todolist\exception\TarefaNaoEncontradaException.class
 com\fatec\todolist\model\enums\StatusTarefa.class
-com\fatec\todolist\service\TarefaService.class
 com\fatec\todolist\dto\TarefaDTO.class
 com\fatec\todolist\service\impl\TarefaServiceImpl.class
-com\fatec\todolist\exception\RegraNegocioException.class
 com\fatec\todolist\TodoListApplication.class

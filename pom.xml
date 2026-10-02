@@ -46,6 +46,12 @@
         </dependency>
     </dependencies>
     <build>
+        <testSourceDirectory>testes/java-testes</testSourceDirectory>
+        <testResources>
+            <testResource>
+                <directory>testes/resources</directory>
+            </testResource>
+        </testResources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
